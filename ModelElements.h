@@ -6,11 +6,11 @@
 
 class PoligonalModel{
 
-private:
+public:
+    
     Polygon* Poligons[256];
     Texture* Textures[64];
 
-public:
     PoligonalModel(Polygon* Poligons, Texture* Textures){
 
         for (int i = 0; i < 256; i++){
@@ -26,13 +26,12 @@ public:
 
 class Flash{
 
-private:
+public:
+
     Point3D Location;
     Angle Angle3D;
     Color Colors;
     float Power;
-
-public:
     
     Flash(Point3D Location, Angle Angle3D, Color Colors, float Power){
         this -> Location = Location;
@@ -54,11 +53,11 @@ public:
 
 class Camera{
 
-private:
+public:
+
     Point3D Location;
     Angle Angle3D;
 
-public:
     void Rotate(Angle Angle3D)
     {
 
@@ -72,12 +71,12 @@ public:
 
 
 class Scene{
-private:
+
+public:
+
     unsigned int Id;
     PoligonalModel Models;
     Flash Flashes;
-
-public:
 
     Scene(unsigned int Id, PoligonalModel Models, Flash Flashes)
     {
